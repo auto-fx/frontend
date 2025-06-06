@@ -18,7 +18,7 @@ fun SignInScreen(
     val viewModel: SignInViewModel = viewModel(factory = object : androidx.lifecycle.ViewModelProvider.Factory {
         override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
             @Suppress("UNCHECKED_CAST")
-            return SignInViewModel(AuthProvider.fakeRepository) as T
+            return SignInViewModel(AuthProvider.realRepository) as T
         }
     })
 

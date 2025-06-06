@@ -15,7 +15,7 @@ fun UpdatePasswordScreen() {
     val viewModel: UpdatePasswordViewModel = viewModel(factory = object : androidx.lifecycle.ViewModelProvider.Factory {
         override fun <T : androidx.lifecycle.ViewModel> create(modelClass: Class<T>): T {
             @Suppress("UNCHECKED_CAST")
-            return UpdatePasswordViewModel(AuthProvider.fakeRepository) as T
+            return UpdatePasswordViewModel(AuthProvider.realRepository) as T
         }
     })
 

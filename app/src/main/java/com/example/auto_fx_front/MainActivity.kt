@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
+import com.example.auto_fx_front.auth.data.AuthProvider
 import com.example.auto_fx_front.presentation.auth.navigation.AuthNavGraph
 import com.example.auto_fx_front.ui.theme.Autofx_frontTheme
 
@@ -19,6 +20,9 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+        AuthProvider.init(applicationContext)
+
         setContent {
             Autofx_frontTheme {
                 val navController = rememberNavController()
