@@ -62,6 +62,10 @@ dependencies {
 
     implementation(libs.androidx.datastore.preferences)
 
+    implementation(libs.retrofit.v290)
+    implementation(libs.converter.moshi)
+    implementation(libs.logging.interceptor)
+
     //Dependencies
     implementation(libs.retrofit)
     implementation(libs.retrofit.converter.gson)
